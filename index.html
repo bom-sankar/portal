@@ -19,9 +19,9 @@ $('.reserve-button').click(function(){
 
     $.ajax
     ({ 
-        url: 'reservebook.php',
+        url: 'https://8ddstav0ti.execute-api.us-east-2.amazonaws.com/Production/events',
         data: {"bookID": book_id},
-        type: 'post',
+        type: 'get',
         success: function(result)
         {
             alert(result);
