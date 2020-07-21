@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<body>
+<p1>hello There<!P1>
+
+<div class= "obutton feature2">
+    <button class="reserve-button">Click here</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+<script>
+$('.reserve-button').click(function(){
+
+    var book_id = $(this).parent().data('id');
+
+    $.ajax
+    ({ 
+        url: 'reservebook.php',
+        data: {"bookID": book_id},
+        type: 'post',
+        success: function(result)
+        {
+            alert(result);
+        }
+    });
+});
+</script>
+
+	
+</body>
+</html>
