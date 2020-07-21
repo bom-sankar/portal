@@ -1,7 +1,7 @@
 
 def bucket = 'portalfront'
 
-node('slaves'){
+node(){
     stage('Checkout'){
         checkout scm
     }
