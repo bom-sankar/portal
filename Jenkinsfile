@@ -10,7 +10,7 @@ node(){
     }
 
     stage('Build'){
-        sh "zip lambda.zip lambda"
+        sh "zip lambda.zip index.js"
     }
 
     stage('Push'){
